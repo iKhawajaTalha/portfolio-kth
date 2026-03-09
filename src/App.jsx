@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import TechMarquee from "./components/TechMarquee";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -42,7 +43,7 @@ export default function App() {
       <Services />
       <SectionDivider />
       <About />
-      <SectionDivider />
+      <TechMarquee />
       <Skills />
       <SectionDivider />
       <Portfolio />

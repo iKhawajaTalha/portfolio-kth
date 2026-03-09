@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { FaDownload } from "react-icons/fa";
 import data from "../data/portfolio";
+import ParticleNetwork from "./ui/ParticleNetwork";
+import TextShimmer from "./ui/TextShimmer";
 
 function useCountUp(target, duration = 2000) {
   const [count, setCount] = useState(0);
@@ -113,11 +115,13 @@ export default function Hero() {
       id="hero"
       className="min-h-screen flex items-center relative overflow-hidden pt-20"
     >
-      {/* Ambient background */}
-      <div className="absolute inset-0 bg-dark" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/[0.03] rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/[0.03] rounded-full blur-[100px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/[0.02] rounded-full blur-[150px]" />
+      {/* Particle Network Background */}
+      <ParticleNetwork className="z-0 opacity-70" />
+
+      {/* Ambient gradients */}
+      <div className="absolute inset-0 bg-dark/40 z-[1]" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/[0.03] rounded-full blur-[120px] z-[1]" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/[0.03] rounded-full blur-[100px] z-[1]" />
 
       <div className="section-padding relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -144,9 +148,11 @@ export default function Hero() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-xl sm:text-2xl lg:text-3xl font-semibold text-accent mb-5 min-h-[2rem] sm:min-h-[2.5rem]"
+              className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-5 min-h-[2rem] sm:min-h-[2.5rem]"
             >
-              <TypewriterText texts={hero.titles} />
+              <TextShimmer as="span" className="text-xl sm:text-2xl lg:text-3xl font-semibold">
+                <TypewriterText texts={hero.titles} />
+              </TextShimmer>
             </motion.h1>
 
             <motion.p
@@ -164,7 +170,7 @@ export default function Hero() {
                   href={s.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border border-gray-700 bg-dark-card/50 flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent hover:bg-accent/10 transition-all duration-300"
+                  className="w-10 h-10 rounded-full border border-gray-700 bg-dark-card/50 flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent hover:bg-accent/10 hover:scale-110 transition-all duration-300"
                 >
                   <s.icon size={16} />
                 </a>
@@ -207,7 +213,6 @@ export default function Hero() {
             className="order-1 lg:order-2 flex justify-center"
           >
             <div className="relative">
-              {/* Outer glow ring */}
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-b from-accent/20 via-accent/5 to-transparent blur-xl" />
 
               <motion.div
@@ -215,18 +220,15 @@ export default function Hero() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="relative"
               >
-                {/* Image container — rounded rectangle for half-body portrait */}
                 <div className="w-64 sm:w-72 lg:w-80 aspect-[3/4] rounded-[2rem] overflow-hidden relative bg-dark-card border border-dark-lighter shadow-2xl shadow-black/40">
                   <img
                     src={hero.profileImage}
                     alt={hero.name}
                     className="w-full h-full object-cover object-top"
                   />
-                  {/* Bottom gradient fade into dark */}
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-dark-card/90 to-transparent" />
                 </div>
 
-                {/* Decorative accent corner */}
                 <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-2 border-r-2 border-accent/40 rounded-br-[2rem]" />
                 <div className="absolute -top-2 -left-2 w-16 h-16 border-t-2 border-l-2 border-accent/40 rounded-tl-[2rem]" />
               </motion.div>

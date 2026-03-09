@@ -64,3 +64,17 @@ body {
     @apply border border-gray-700 hover:border-accent text-gray-300 hover:text-accent font-medium px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2;
   }
 }
+
+@keyframes shimmer {
+  0% { background-position: 250% center; }
+  100% { background-position: -250% center; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-100% - 2rem)); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s ease-in-out infinite;
+}
