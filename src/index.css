@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f97316;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+::selection {
+  background: #f97316;
+  color: #0d0d0d;
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-gray-500 text-center mb-12 max-w-lg mx-auto text-sm sm:text-base leading-relaxed;
+  }
+
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-hover text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2 hover:shadow-lg hover:shadow-accent/20;
+  }
+
+  .btn-outline {
+    @apply border border-gray-700 hover:border-accent text-gray-300 hover:text-accent font-medium px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2;
+  }
+}
