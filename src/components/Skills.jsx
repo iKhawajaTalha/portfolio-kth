@@ -108,7 +108,7 @@ export default function Skills() {
           Core technologies and tools I work with daily
         </motion.p>
 
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 mt-4 max-w-4xl mx-auto">
           {data.skills.map((skill, i) => (
             <CircularProgress key={i} {...skill} delay={i * 0.08} />
           ))}

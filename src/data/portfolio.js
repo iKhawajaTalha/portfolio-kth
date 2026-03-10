@@ -17,6 +17,8 @@ import {
   SiJavascript,
   SiPytorch,
   SiFastapi,
+  SiN8N,
+  SiRoboflow,
 } from "react-icons/si";
 import { TbBrandOpenai } from "react-icons/tb";
 import { HiOutlineMail } from "react-icons/hi";
@@ -117,7 +119,9 @@ const portfolioData = {
     { icon: SiPytorch, name: "PyTorch", percentage: 90 },
     { icon: SiOpencv, name: "OpenCV", percentage: 90 },
     { icon: TbBrandOpenai, name: "YOLO / Ultralytics", percentage: 90 },
+    { icon: SiN8N, name: "n8n", percentage: 88 },
     { icon: SiFastapi, name: "FastAPI", percentage: 85 },
+    { icon: SiRoboflow, name: "Roboflow", percentage: 85 },
     { icon: SiPandas, name: "Pandas", percentage: 85 },
     { icon: SiNumpy, name: "NumPy", percentage: 85 },
     { icon: SiJavascript, name: "JavaScript", percentage: 75 },
