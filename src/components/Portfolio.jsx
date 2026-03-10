@@ -94,7 +94,7 @@ export default function Portfolio() {
                       {item.category}
                     </span>
                     {item.description && (
-                      <p className="text-xs text-gray-500 mt-2 line-clamp-2 leading-relaxed">
+                      <p className={`text-xs text-gray-500 mt-2 leading-relaxed ${item.featured ? "line-clamp-4" : "line-clamp-2"}`}>
                         {item.description}
                       </p>
                     )}

@@ -7,6 +7,7 @@ import {
   FaRobot,
   FaCamera,
   FaBrain,
+  FaVideo,
 } from "react-icons/fa";
 import {
   SiPython,
@@ -14,6 +15,8 @@ import {
   SiNumpy,
   SiPandas,
   SiJavascript,
+  SiPytorch,
+  SiFastapi,
 } from "react-icons/si";
 import { TbBrandOpenai } from "react-icons/tb";
 import { HiOutlineMail } from "react-icons/hi";
@@ -28,11 +31,11 @@ const portfolioData = {
       "AI Automation Engineer",
       "ML Engineer",
     ],
-    bio: "Building and shipping real-world AI detection systems and intelligent automation — from raw data to live production deployment.",
+    bio: "Building production-grade AI detection systems and intelligent automation — from raw data to enterprise deployment serving 40+ member teams.",
     stats: [
       { value: 9, suffix: "+", label: "Years Experience" },
-      { value: 5, suffix: "+", label: "Key Projects" },
-      { value: 40, suffix: "+", label: "Team Members Served" },
+      { value: 4, suffix: "", label: "Enterprise Projects" },
+      { value: 100, suffix: "+", label: "Product Categories" },
     ],
     cvLink: "#contact",
     profileImage: "/images/profile.png",
@@ -58,43 +61,43 @@ const portfolioData = {
   services: {
     title: "Services",
     subtitle:
-      "End-to-end AI and computer vision solutions — from dataset engineering to production deployment.",
+      "End-to-end AI and computer vision solutions — from dataset engineering to enterprise deployment.",
     items: [
       {
         icon: FaCamera,
         title: "Computer Vision",
         description:
-          "Real-time object detection pipelines using YOLO architectures, IP camera integration, and on-screen analytics with sub-second latency.",
+          "Real-time object detection pipelines using YOLO architectures for brand detection, shelf analytics, product placement tracking, and IP camera integration.",
       },
       {
         icon: FaRobot,
         title: "AI Automation",
         description:
-          "Production-grade n8n automation systems integrating Slack, OpenAI GPT-4o, Whisper, and OpenProject — handling voice-to-task pipelines, intent classification, and automated daily reminders for 40+ member teams.",
+          "Production-grade n8n workflows integrating Slack, OpenAI GPT-4o, Whisper, and OpenProject — voice-to-task pipelines, intent classification, and automated reminders for 40+ teams.",
+      },
+      {
+        icon: FaVideo,
+        title: "Video Analytics",
+        description:
+          "AI-powered CCTV video processing for gender detection, parking monitoring, engagement analytics, and workplace safety — commercially deployed to enterprise clients.",
       },
       {
         icon: FaBrain,
         title: "ML Engineering",
         description:
-          "Full ML lifecycle — from data collection and annotation through model training, fine-tuning, and benchmarking with Ultralytics YOLO framework.",
+          "Full ML lifecycle — data collection, annotation, model training, fine-tuning, and benchmarking with YOLOv8/v11, PyTorch, and Ultralytics framework.",
       },
       {
         icon: FaCode,
-        title: "Web Development",
+        title: "APIs & Dashboards",
         description:
-          "Lightweight dashboards and frontends using HTML, CSS, and JavaScript to visualise model outputs and make AI results accessible.",
-      },
-      {
-        icon: FaPaintBrush,
-        title: "Dataset Engineering",
-        description:
-          "Custom dataset construction with 1,900+ augmented images, annotation, and augmentation for diverse lighting conditions and camera angles.",
+          "FastAPI endpoints returning structured KPIs and annotated images, plus lightweight frontends to visualise model outputs for non-technical stakeholders.",
       },
       {
         icon: FaMobileAlt,
         title: "Deployment & Integration",
         description:
-          "On-site inference system deployment on client machines with IP camera integration, firewall configuration, and low-latency performance.",
+          "On-site inference deployment on client machines with IP camera integration, firewall configuration, and scalable architectures for 100+ product categories.",
       },
     ],
   },
@@ -104,15 +107,17 @@ const portfolioData = {
     title: "About Me",
     subtitle: "Computer Vision & AI Automation Engineer",
     image: "/images/profile.png",
-    bio: "Versatile Computer Vision & AI Automation Engineer with a strong track record of building and shipping real-world detection systems using YOLO architectures and production-grade AI automation pipelines. Experienced across the full ML lifecycle — from raw data collection and annotation through model training, fine-tuning, and live production deployment on client infrastructure. Recently designed and built an AI-powered project management automation system on n8n that lets a 40-member team manage OpenProject tasks entirely through Slack — including voice messages — using GPT-4o for intent classification, fuzzy user matching, and automated daily reminders. Combines deep Python and computer vision expertise with web development skills to bridge AI back-ends with practical frontends. Holds a Bachelor of Science in Computer Science from COMSATS University Islamabad — Lahore Campus. Currently working as a Machine Learning Engineer at Scraperrs Lab and actively seeking international opportunities in AI, computer vision, or full-stack ML engineering.",
+    bio: "Versatile Computer Vision & AI Automation Engineer with a proven track record of delivering enterprise-grade AI systems. Built and deployed real-world detection platforms using YOLO architectures — from retail shelf analytics covering 100+ product categories to AI-powered video surveillance commercially deployed to clients including Nissan and AKEA. Designed an intelligent project management automation system on n8n that enables a 40-member team to manage tasks through natural language and voice commands via Slack, powered by GPT-4o and Whisper. Experienced across the full ML lifecycle — from raw data collection through model training to live production deployment. Combines deep Python, PyTorch, and OpenCV expertise with API development (FastAPI) and frontend skills to bridge AI back-ends with practical user interfaces. BS Computer Science from COMSATS University Islamabad. Currently ML Engineer at Scraperrs Lab, actively seeking international opportunities in AI, computer vision, or full-stack ML engineering.",
     cvLink: "#contact",
   },
 
   /* ───────── SKILLS ───────── */
   skills: [
     { icon: SiPython, name: "Python", percentage: 95 },
+    { icon: SiPytorch, name: "PyTorch", percentage: 90 },
     { icon: SiOpencv, name: "OpenCV", percentage: 90 },
     { icon: TbBrandOpenai, name: "YOLO / Ultralytics", percentage: 90 },
+    { icon: SiFastapi, name: "FastAPI", percentage: 85 },
     { icon: SiPandas, name: "Pandas", percentage: 85 },
     { icon: SiNumpy, name: "NumPy", percentage: 85 },
     { icon: SiJavascript, name: "JavaScript", percentage: 75 },
@@ -123,76 +128,53 @@ const portfolioData = {
     title: "Portfolio",
     categories: [
       "All",
-      "Computer Vision",
       "AI Automation",
-      "Web Development",
+      "Computer Vision",
+      "Video Analytics",
     ],
     items: [
-      {
-        title: "YOLOv8 Real-Time Person Detection",
-        category: "Computer Vision",
-        image:
-          "https://placehold.co/400x300/1a1a1a/f97316?text=Person+Detection",
-        link: "#",
-        description:
-          "Complete pipeline from dataset collection and annotation through model training and live camera deployment, with real-time on-screen person counts and analytics.",
-      },
-      {
-        title: "Gender Detection — Gulf Attire Dataset",
-        category: "Computer Vision",
-        image:
-          "https://placehold.co/400x300/1a1a1a/f97316?text=Gender+Detection",
-        link: "#",
-        description:
-          "Domain-specific dataset featuring Gulf traditional attire with YOLO model for gender classification in a culturally-aware context.",
-      },
-      {
-        title: "Petromin Detection Model",
-        category: "Computer Vision",
-        image:
-          "https://placehold.co/400x300/1a1a1a/f97316?text=Petromin+Model",
-        link: "#",
-        description:
-          "Processed raw video footage, applied augmentation to build a robust training set, and trained YOLOv11 model with strong detection precision.",
-      },
+      /* ── 1. AI PM Automation (LLM / AI Agents — most trendy) ── */
       {
         title: "AI-Powered Project Management Automation",
         category: "AI Automation",
-        image:
-          "https://placehold.co/400x300/1a1a1a/f97316?text=AI+PM+System",
+        image: "https://placehold.co/400x300/1a1a1a/f97316?text=AI+PM+System",
         link: "#",
         featured: true,
-        tech: ["n8n", "OpenProject", "Slack", "GPT-4o", "Whisper"],
+        tech: ["n8n", "GPT-4o", "Whisper", "Slack API", "OpenProject", "JavaScript"],
         description:
-          "Production-grade system for a 40+ member team — Slack Bot processes text & voice messages, classifies intent across 6 action types using GPT-4o-mini, fuzzy assignee matching, daily automated reminders, and Google Sheets audit logging.",
+          "Architected a production AI platform for a 40+ member team — intelligent Slack bot classifies task intents (create, complete, delay, delete, status) via GPT-4o-mini with multilingual support. Voice-to-task pipeline via Whisper, fuzzy assignee resolution, cron-based daily reminders, role validation, event deduplication, and Google Sheets audit logging.",
       },
+      /* ── 2. Tarveej — Shelf Analytics Platform ── */
       {
-        title: "Voice-to-Task Pipeline",
-        category: "AI Automation",
-        image:
-          "https://placehold.co/400x300/1a1a1a/f97316?text=Voice+Pipeline",
-        link: "#",
-        tech: ["OpenAI Whisper", "GPT-4o", "n8n", "Slack API"],
-        description:
-          "Transcribes Slack audio messages via OpenAI Whisper and routes them through AI classification engine supporting English, Urdu, and Roman Urdu for multilingual task management.",
-      },
-      {
-        title: "Real-Time Analytics Dashboard",
-        category: "Web Development",
-        image:
-          "https://placehold.co/400x300/1a1a1a/f97316?text=Dashboard",
-        link: "#",
-        description:
-          "Lightweight HTML/CSS/JavaScript dashboard to visualise model outputs and detection metrics for non-technical stakeholders.",
-      },
-      {
-        title: "IP Camera Inference System",
+        title: "Tarveej — AI Retail Shelf Analytics Platform",
         category: "Computer Vision",
-        image:
-          "https://placehold.co/400x300/1a1a1a/f97316?text=IP+Camera+System",
+        image: "https://placehold.co/400x300/1a1a1a/f97316?text=Tarveej",
         link: "#",
+        featured: true,
+        tech: ["YOLOv8", "Python", "OpenCV", "PyTorch", "FastAPI", "CVAT"],
         description:
-          "End-to-end deployment of inference systems on client machines with IP camera integration, firewall rules, and IP-based access restrictions.",
+          "AI-powered shelf analytics detecting brands, product facings, shelf zones, and promotional tags. Multi-stage CV pipeline with share-of-shelf analytics, product placement tracking (Top/Middle/Bottom), and promotional execution monitoring — scaled to 100+ product categories across retail departments.",
+      },
+      /* ── 3. Pulsee — Video Analytics & Workplace Safety ── */
+      {
+        title: "Pulsee — AI Video Analytics & Workplace Safety",
+        category: "Video Analytics",
+        image: "https://placehold.co/400x300/1a1a1a/f97316?text=Pulsee",
+        link: "#",
+        featured: true,
+        tech: ["Python", "OpenCV", "Deep Learning", "Computer Vision"],
+        description:
+          "AI-powered video analytics platform with gender detection, parking monitoring, engagement analytics, and harassment detection. Real-time multi-camera CCTV processing with alerts and behavioral insights — commercially deployed and sold to enterprise clients including Nissan and AKEA.",
+      },
+      /* ── 4. Petromin / PetroLube — Campaign Monitoring ── */
+      {
+        title: "Petromin — AI Gondola Campaign Monitoring",
+        category: "Computer Vision",
+        image: "https://placehold.co/400x300/1a1a1a/f97316?text=Petromin",
+        link: "#",
+        tech: ["Python", "YOLO", "OpenCV", "Computer Vision"],
+        description:
+          "Computer vision solution for Petromin Nissan / PetroLube monitoring retail marketing campaign compliance — detecting gondola displays, product placement, and brand visibility. Measures campaign occupancy, product presence, and shelf placement accuracy across stores.",
       },
     ],
   },
@@ -207,9 +189,9 @@ const portfolioData = {
     serviceOptions: [
       "Computer Vision",
       "AI Automation",
+      "Video Analytics",
       "ML Engineering",
-      "Web Development",
-      "Dataset Engineering",
+      "APIs & Dashboards",
       "Deployment & Integration",
     ],
   },

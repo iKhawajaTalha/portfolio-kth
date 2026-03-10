@@ -9,8 +9,8 @@ export default function About() {
 
   const highlights = [
     { icon: FiBriefcase, label: "ML Engineer at Scraperrs Lab" },
-    { icon: FiCpu, label: "YOLO / Computer Vision Expert" },
-    { icon: FiZap, label: "AI Automation (n8n + GPT-4o)" },
+    { icon: FiCpu, label: "Computer Vision (YOLO + PyTorch)" },
+    { icon: FiZap, label: "AI Automation (n8n + GPT-4o + Whisper)" },
     { icon: FiBookOpen, label: "BS CS — COMSATS University" },
   ];
 

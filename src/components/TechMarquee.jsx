@@ -4,28 +4,29 @@ import {
   SiPandas,
   SiNumpy,
   SiJavascript,
-  SiHtml5,
-  SiCss,
-  SiReact,
-  SiTailwindcss,
+  SiPytorch,
+  SiFastapi,
+  SiN8N,
+  SiOpenai,
 } from "react-icons/si";
 import { TbBrandOpenai } from "react-icons/tb";
-import { FaSlack, FaGitAlt } from "react-icons/fa";
+import { FaSlack, FaGitAlt, FaDatabase } from "react-icons/fa";
 import Marquee from "./ui/Marquee";
 
 const techStack = [
-  { icon: SiPython, name: "Python", color: "#3776AB" },
-  { icon: TbBrandOpenai, name: "YOLO / Ultralytics", color: "#f97316" },
-  { icon: SiOpencv, name: "OpenCV", color: "#5C3EE8" },
-  { icon: SiPandas, name: "Pandas", color: "#150458" },
-  { icon: SiNumpy, name: "NumPy", color: "#013243" },
-  { icon: SiJavascript, name: "JavaScript", color: "#F7DF1E" },
-  { icon: SiHtml5, name: "HTML5", color: "#E34F26" },
-  { icon: SiCss, name: "CSS3", color: "#1572B6" },
-  { icon: SiReact, name: "React", color: "#61DAFB" },
-  { icon: SiTailwindcss, name: "Tailwind CSS", color: "#06B6D4" },
-  { icon: FaSlack, name: "Slack API", color: "#4A154B" },
-  { icon: FaGitAlt, name: "Git", color: "#F05032" },
+  { icon: SiPython, name: "Python" },
+  { icon: SiPytorch, name: "PyTorch" },
+  { icon: TbBrandOpenai, name: "YOLO / Ultralytics" },
+  { icon: SiOpencv, name: "OpenCV" },
+  { icon: SiOpenai, name: "OpenAI GPT-4o" },
+  { icon: SiFastapi, name: "FastAPI" },
+  { icon: SiN8N, name: "n8n" },
+  { icon: FaSlack, name: "Slack API" },
+  { icon: SiPandas, name: "Pandas" },
+  { icon: SiNumpy, name: "NumPy" },
+  { icon: SiJavascript, name: "JavaScript" },
+  { icon: FaDatabase, name: "REST APIs" },
+  { icon: FaGitAlt, name: "Git" },
 ];
 
 function TechItem({ icon: Icon, name }) {
