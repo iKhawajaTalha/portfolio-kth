@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
-import { FiBriefcase, FiCpu, FiBookOpen } from "react-icons/fi";
+import { FiBriefcase, FiCpu, FiBookOpen, FiZap } from "react-icons/fi";
 import data from "../data/portfolio";
 import GridPattern from "./ui/GridPattern";
 
@@ -10,6 +10,7 @@ export default function About() {
   const highlights = [
     { icon: FiBriefcase, label: "ML Engineer at Scraperrs Lab" },
     { icon: FiCpu, label: "YOLO / Computer Vision Expert" },
+    { icon: FiZap, label: "AI Automation (n8n + GPT-4o)" },
     { icon: FiBookOpen, label: "BS CS — COMSATS University" },
   ];
 

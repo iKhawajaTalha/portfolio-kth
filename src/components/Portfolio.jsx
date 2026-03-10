@@ -80,9 +80,16 @@ export default function Portfolio() {
                     </div>
                   </div>
                   <div className="p-5">
-                    <h3 className="font-semibold text-white text-sm sm:text-base mb-1.5 group-hover:text-accent transition-colors duration-300">
-                      {item.title}
-                    </h3>
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <h3 className="font-semibold text-white text-sm sm:text-base group-hover:text-accent transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      {item.featured && (
+                        <span className="text-[9px] font-bold uppercase tracking-wider bg-accent/20 text-accent px-2 py-0.5 rounded-full shrink-0">
+                          Featured
+                        </span>
+                      )}
+                    </div>
                     <span className="text-[11px] text-accent/80 font-medium uppercase tracking-wider">
                       {item.category}
                     </span>
@@ -90,6 +97,18 @@ export default function Portfolio() {
                       <p className="text-xs text-gray-500 mt-2 line-clamp-2 leading-relaxed">
                         {item.description}
                       </p>
+                    )}
+                    {item.tech && (
+                      <div className="flex flex-wrap gap-1.5 mt-3">
+                        {item.tech.map((t) => (
+                          <span
+                            key={t}
+                            className="text-[10px] text-gray-500 bg-dark-lighter px-2 py-0.5 rounded-md"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
                     )}
                   </div>
                 </motion.a>

@@ -28,11 +28,11 @@ const portfolioData = {
       "AI Automation Engineer",
       "ML Engineer",
     ],
-    bio: "Building and shipping real-world AI detection systems — from raw data to live production deployment.",
+    bio: "Building and shipping real-world AI detection systems and intelligent automation — from raw data to live production deployment.",
     stats: [
       { value: 9, suffix: "+", label: "Years Experience" },
-      { value: 4, suffix: "+", label: "Key Projects" },
-      { value: 1900, suffix: "+", label: "Dataset Images" },
+      { value: 5, suffix: "+", label: "Key Projects" },
+      { value: 40, suffix: "+", label: "Team Members Served" },
     ],
     cvLink: "#contact",
     profileImage: "/images/profile.png",
@@ -70,7 +70,7 @@ const portfolioData = {
         icon: FaRobot,
         title: "AI Automation",
         description:
-          "Custom n8n automation workflows integrating Slack, OpenAI GPT, and OpenProject to convert natural language into automated task execution.",
+          "Production-grade n8n automation systems integrating Slack, OpenAI GPT-4o, Whisper, and OpenProject — handling voice-to-task pipelines, intent classification, and automated daily reminders for 40+ member teams.",
       },
       {
         icon: FaBrain,
@@ -104,7 +104,7 @@ const portfolioData = {
     title: "About Me",
     subtitle: "Computer Vision & AI Automation Engineer",
     image: "/images/profile.png",
-    bio: "Versatile Computer Vision & AI Automation Engineer with a strong track record of building and shipping real-world detection systems using YOLO architectures. Experienced across the full ML lifecycle — from raw data collection and annotation through model training, fine-tuning, and live production deployment on client infrastructure. Combines deep Python and computer vision expertise with web development skills (HTML, CSS, and JavaScript) to bridge AI back-ends with practical frontends and dashboards. Recognized for engineering high-quality custom datasets, designing robust n8n automation workflows, and delivering clear, client-focused solutions. Holds a Bachelor of Science in Computer Science from COMSATS University Islamabad — Lahore Campus. Currently working as a Machine Learning Engineer at Scraperrs Lab and actively seeking international opportunities in AI, computer vision, or full-stack ML engineering.",
+    bio: "Versatile Computer Vision & AI Automation Engineer with a strong track record of building and shipping real-world detection systems using YOLO architectures and production-grade AI automation pipelines. Experienced across the full ML lifecycle — from raw data collection and annotation through model training, fine-tuning, and live production deployment on client infrastructure. Recently designed and built an AI-powered project management automation system on n8n that lets a 40-member team manage OpenProject tasks entirely through Slack — including voice messages — using GPT-4o for intent classification, fuzzy user matching, and automated daily reminders. Combines deep Python and computer vision expertise with web development skills to bridge AI back-ends with practical frontends. Holds a Bachelor of Science in Computer Science from COMSATS University Islamabad — Lahore Campus. Currently working as a Machine Learning Engineer at Scraperrs Lab and actively seeking international opportunities in AI, computer vision, or full-stack ML engineering.",
     cvLink: "#contact",
   },
 
@@ -156,13 +156,25 @@ const portfolioData = {
           "Processed raw video footage, applied augmentation to build a robust training set, and trained YOLOv11 model with strong detection precision.",
       },
       {
-        title: "AI Automation: Slack → OpenAI → OpenProject",
+        title: "AI-Powered Project Management Automation",
         category: "AI Automation",
         image:
-          "https://placehold.co/400x300/1a1a1a/f97316?text=AI+Automation",
+          "https://placehold.co/400x300/1a1a1a/f97316?text=AI+PM+System",
         link: "#",
+        featured: true,
+        tech: ["n8n", "OpenProject", "Slack", "GPT-4o", "Whisper"],
         description:
-          "n8n workflow enabling teams to create and manage project tasks through natural language Slack messages, reducing manual project setup time.",
+          "Production-grade system for a 40+ member team — Slack Bot processes text & voice messages, classifies intent across 6 action types using GPT-4o-mini, fuzzy assignee matching, daily automated reminders, and Google Sheets audit logging.",
+      },
+      {
+        title: "Voice-to-Task Pipeline",
+        category: "AI Automation",
+        image:
+          "https://placehold.co/400x300/1a1a1a/f97316?text=Voice+Pipeline",
+        link: "#",
+        tech: ["OpenAI Whisper", "GPT-4o", "n8n", "Slack API"],
+        description:
+          "Transcribes Slack audio messages via OpenAI Whisper and routes them through AI classification engine supporting English, Urdu, and Roman Urdu for multilingual task management.",
       },
       {
         title: "Real-Time Analytics Dashboard",
