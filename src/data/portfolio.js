@@ -68,38 +68,50 @@ const portfolioData = {
       {
         icon: FaCamera,
         title: "Computer Vision",
+        tagline: "See What Humans Miss",
         description:
-          "Real-time object detection pipelines using YOLO architectures for brand detection, shelf analytics, product placement tracking, and IP camera integration.",
+          "High-precision object detection pipelines built on YOLO architectures — engineered for brand recognition, shelf share analytics, and product placement scoring across 100+ retail SKU categories with live IP camera feeds.",
+        highlights: ["YOLO v8/v11", "100+ SKU Categories", "Real-Time IP Feeds"],
       },
       {
         icon: FaRobot,
         title: "AI Automation",
+        tagline: "Workflows That Think",
         description:
-          "Production-grade n8n workflows integrating Slack, OpenAI GPT-4o, Whisper, and OpenProject — voice-to-task pipelines, intent classification, and automated reminders for 40+ teams.",
+          "Production-grade intelligent workflows on n8n integrating GPT-4o, Whisper, Slack, and OpenProject — enabling voice-to-task creation, multi-language intent classification, smart assignee resolution, and cron-based reminders for 40+ member teams.",
+        highlights: ["GPT-4o + Whisper", "40+ Team Members", "Voice-to-Task"],
       },
       {
         icon: FaVideo,
         title: "Video Analytics",
+        tagline: "Intelligence From Every Frame",
         description:
-          "AI-powered CCTV video processing for gender detection, parking monitoring, engagement analytics, and workplace safety — commercially deployed to enterprise clients.",
+          "AI-powered multi-camera CCTV processing delivering real-time gender detection, footfall counting, engagement scoring, parking monitoring, and workplace safety alerts — commercially deployed to enterprise clients including Nissan and AKEA.",
+        highlights: ["Multi-Camera CCTV", "Enterprise Clients", "Real-Time Alerts"],
       },
       {
         icon: FaBrain,
         title: "ML Engineering",
+        tagline: "From Raw Data to Production Models",
         description:
-          "Full ML lifecycle — data collection, annotation, model training, fine-tuning, and benchmarking with YOLOv8/v11, PyTorch, and Ultralytics framework.",
+          "Full machine learning lifecycle management — custom dataset curation with Roboflow & CVAT, iterative model training and hyperparameter tuning on PyTorch, systematic benchmarking, and performance optimisation for edge deployment.",
+        highlights: ["PyTorch & Roboflow", "Custom Datasets", "Edge Optimised"],
       },
       {
         icon: FaCode,
         title: "APIs & Dashboards",
+        tagline: "AI You Can Actually Use",
         description:
-          "FastAPI endpoints returning structured KPIs and annotated images, plus lightweight frontends to visualise model outputs for non-technical stakeholders.",
+          "Production FastAPI services returning structured KPIs, annotated inference images, and confidence metrics — paired with clean dashboard frontends that let non-technical stakeholders interact with model outputs intuitively.",
+        highlights: ["FastAPI", "KPI Dashboards", "Stakeholder-Ready"],
       },
       {
         icon: FaMobileAlt,
         title: "Deployment & Integration",
+        tagline: "Ship It. Scale It. Monitor It.",
         description:
-          "On-site inference deployment on client machines with IP camera integration, firewall configuration, and scalable architectures for 100+ product categories.",
+          "End-to-end on-site inference deployment — client machine setup, IP camera integration, firewall configuration, and resilient architectures built to scale across multi-store environments with zero-downtime requirements.",
+        highlights: ["On-Site Deployment", "Multi-Store Scale", "Zero Downtime"],
       },
     ],
   },
